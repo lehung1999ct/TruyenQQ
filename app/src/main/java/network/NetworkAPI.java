@@ -1,4 +1,4 @@
-//package network;
+package network;//package network;
 //
 //import java.util.List;
 //
@@ -23,3 +23,14 @@
 //    @GET("API_search.php")
 //    Call<List<ModelSearch>> getSearch(@Query("index") int index, @Query("input") String input);
 //}
+
+import model.ListManga;
+import retrofit2.Call;
+import retrofit2.http.GET;
+
+public interface NetworkAPI{
+
+    @GET("api_get_comic.php")
+    Call<ListManga> getDataComic();
+
+}
